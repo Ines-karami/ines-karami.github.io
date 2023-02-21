@@ -18,28 +18,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
 <script>
 
-  function sendEventInfo(artikelnamn, lastid) {
-        gtag('event', 'last_artikel', {
-        "artikel_namn": artikelnamn,
-        "las_tid": lastid,
+  <script>  
+function sendArtReadEvent(artikelnamn, tid) {
+    gtag('event', 'read_article', {
+        "artikelnamn": artikelnamn,
+        "tid": tid,
+    });
+ }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const readArticle1Button = document.getElementById("knapp1");
+
+    if (readArticle1Button) {
+      
+        readArticle1Button.addEventListener("click", () => {
+            sendEventInfo("Article", 50)
         });
-    }
-  
-     document.addEventListener("DOMContentLoaded", () => {
 
-        const readTask1Button = document.getElementById("knapp_1");
-    
-        if(readTask1Button) {
+        
+        document.getElementById("knapp2").addEventListener("click", () => {
+            sendEventInfo("Jolies Article", 100)
+        });
 
-            readTask1Button.addEventListener("click", () => {
-            sendInfoEvent(”Article”,50)
-             });
-
-            document.getElementById("knapp_2").addEventListener("click", () => {
-            sendInfoEvent(”Jolie Article”,100)
-            });
-          
-        }
+ 
+      }
   
  console.log(”20230125");
     
