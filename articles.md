@@ -21,4 +21,5 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 
 <button id="knapp2" data-artikelnamn="Jolies Article" data-tid=100 class="read-article">Läst artikel</button> 
-<button id="order" data-subvalue="100" class="sub-button" >Beställ</button>
+<button id="order" data-artikelnamn="Jolies Article" data-tid=100 class="read-article">beställ</button> 
+
